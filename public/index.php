@@ -3,6 +3,7 @@
 require "../bootstrap.php";
 
 use app\classes\Uri;
+use app\classes\Routes;
 
 $routes = [
 
@@ -10,4 +11,5 @@ $routes = [
 
 ];
 
-$uri = Uri::load();
+$uri = Uri::uri();
+require Routes::load($routes, $uri);
