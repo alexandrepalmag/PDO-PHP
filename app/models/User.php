@@ -7,7 +7,7 @@ class User extends Model
 
     protected $table = 'users';
 
-     /*public function insert(array $attributes)
+    /*public function insert(array $attributes)
     {
 
         $sql = "insert into {$this->table}(name, email, password) value(:name, :email, :password)";
@@ -21,4 +21,14 @@ class User extends Model
 
         return $insert->execute(); 
     }*/
+
+    public function update(array $attributes)
+    {
+
+        $sql = "update {$this->table} set name = :name, email= :email, password = :password where id = :id";
+        $update = $this->connection->prepare($sql);
+        $update->execute($attributes);
+
+        return $update->rowCount();
+    }
 }

@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <h1>Hello!!!</h1>
 
     <div class="btn-group">
         <a href="/" class="btn btn-defaut">Início</a>
@@ -21,7 +20,7 @@
 
         <?php require $layout->load(); ?>
 
-        
+
     </div>
 
 </body>
