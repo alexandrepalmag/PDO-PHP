@@ -4,8 +4,12 @@ namespace app\models;
 
 use app\models\Connection;
 
+use app\traits\PersistDb;
+
 abstract class Model
 {
+
+    use PersistDb;
 
     protected $connection;
 

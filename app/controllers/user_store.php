@@ -16,6 +16,7 @@ $registered = $user->insert([
 
 ]);
 
-if($registered){
+if ($registered) {
+
     header('location:/');
 }

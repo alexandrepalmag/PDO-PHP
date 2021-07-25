@@ -7,19 +7,18 @@ class User extends Model
 
     protected $table = 'users';
 
-    public function insert(array $attributes)
+     /*public function insert(array $attributes)
     {
 
-        dd($attributes);
-
-        /* $sql = "insert into {$this->table}(name, email, password) value(:name, :email, :password)";
+        $sql = "insert into {$this->table}(name, email, password) value(:name, :email, :password)";
 
         $insert = $this->connection->prepare($sql);
 
-        $insert->bindValue('name', $attributes['name']);
-        $insert->bindValue('email', $attributes['email']);
-        $insert->bindValue('password', $attributes['password']);
+        foreach ($$attributes as $key => $value) {
 
-        return $insert->execute(); */
-    }
+            $insert->bindValue($key, $value);
+        }
+
+        return $insert->execute(); 
+    }*/
 }
