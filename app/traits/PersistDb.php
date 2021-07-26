@@ -21,6 +21,8 @@ trait PersistDb
     public function update($attributes, $where)
     {
 
+        $attributes = (array) $attributes;
+
         $sql = (new Update)->where($where)->sql($this->table, $attributes);
 
         $update = $this->connection->prepare($sql);

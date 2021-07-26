@@ -1,20 +1,25 @@
 <?php
 
+use app\classes\Validation;
 use app\models\User;
 
-$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+/* $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING); */
+
+$validation = new Validation;
+$validate= $validation->validate($_POST);
 
 $user = new User;
 
-$registered = $user->insert([
+$registered = $user->insert($validate);
+/* [
 
-    'name' => $name,
+     'name' => $name,
     'email' => $email,
     'password' => $password,
 
-]);
+] */
 
 if ($registered) {
 

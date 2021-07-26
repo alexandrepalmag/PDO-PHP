@@ -16,5 +16,6 @@
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Register</button>
+        <a href="/" class="btn btn-danger">Cancel</a>
     </form>
 </div>

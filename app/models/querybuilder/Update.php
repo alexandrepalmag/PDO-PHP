@@ -18,7 +18,7 @@ class Update
     public function sql($table, $attributes)
     {
 
-        $sql = "update {$table} set";
+        $sql = "update {$table} set ";
 
         unset($attributes[array_keys($this->where)[0]]);
 
@@ -31,7 +31,7 @@ class Update
 
         $where = array_keys($this->where);
 
-        $sql .= "where {$where[0]} = :{where[0]}";
+        $sql .= " where {$where[0]} = :{$where[0]}";
 
         return $sql;
     }
