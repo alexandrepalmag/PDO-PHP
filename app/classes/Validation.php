@@ -16,5 +16,7 @@ class Validation
         }
 
         return (object) $this->validate;
+
+        return $this->validate;
     }
 }

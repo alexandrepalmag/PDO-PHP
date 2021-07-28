@@ -7,12 +7,12 @@ use app\models\User;
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING); */
 
-$validation = new Validation;
+/* $validation = new Validation;
 $validate= $validation->validate($_POST);
 
 $user = new User;
 
-$registered = $user->insert($validate);
+$registered = $user->insert($validate); */
 /* [
 
      'name' => $name,
@@ -21,7 +21,8 @@ $registered = $user->insert($validate);
 
 ] */
 
-if ($registered) {
+/* if ($registered) {
 
     header('location:/');
-}
+} */
+

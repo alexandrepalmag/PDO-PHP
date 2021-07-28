@@ -20,7 +20,6 @@
 
         <?php require $layout->load(); ?>
 
-
     </div>
 
 </body>
